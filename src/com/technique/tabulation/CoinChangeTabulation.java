@@ -1,4 +1,4 @@
-package com.dsa.tabulation;
+package com.technique.tabulation;
 
 import java.util.Arrays;
 
