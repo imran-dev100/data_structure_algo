@@ -9,10 +9,11 @@ package com.technique.tabulation;
 public class ClimbingStairs {
 
 	public static void main(String[] args) {
-		System.out.print(climbingStairs2D(3));
+		System.out.println(climbingStairs2D(3));
+		System.out.println(climbingStairs1D(3));
 	}
 
-	private static Integer climbingStairs2D(int n) {
+	private static int climbingStairs2D(int n) {
 
 		int[] cache = new int[n + 1];
 		cache[0] = 1;
@@ -22,5 +23,19 @@ public class ClimbingStairs {
 			cache[i] = cache[i - 1] + cache[i - 2];
 
 		return cache[n];
+	}
+
+	private static int climbingStairs1D(int n) {
+
+		int x = 1;
+		int y = 1;
+
+		for (int i = 2; i <= n; i++) {
+			int temp = x + y;
+			y = x;
+			x = temp;
+		}
+		
+		return x;
 	}
 }
