@@ -5,7 +5,7 @@ public class CountingBits {
 	
   public static void main(String[] args) {
 	int[] arr  = countBits(5);
-	  for(int i:arr)
+	for(int i:arr)
 		System.out.print(i+" ");
   }
 
