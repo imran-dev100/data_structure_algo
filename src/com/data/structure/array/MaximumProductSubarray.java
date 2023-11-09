@@ -30,4 +30,12 @@ public class MaximumProductSubarray {
 	 * 
 	 * 
 	 */
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	private int maxProduct(int[] nums) {
+		return 0;
+	}
 }
