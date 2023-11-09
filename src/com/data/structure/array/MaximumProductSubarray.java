@@ -33,7 +33,7 @@ public class MaximumProductSubarray {
 		int[] nums = {2,3,-2,4};
 		System.out.println(maxProduct(nums));
 		
-		nums = new int[]{-2,0,-1};
+		nums = new int[]{-2,3,-4};
 		System.out.println(maxProduct(nums));
 		
 	}
