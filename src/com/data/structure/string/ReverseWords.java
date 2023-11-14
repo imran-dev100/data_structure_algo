@@ -1,31 +1,22 @@
 package com.data.structure.string;
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-
 public class ReverseWords {
 
 	public static void main(String[] args) {
-		String s = "i love programming very much";
+		final String s = "i love programming very much";
 		System.out.println("Original String: ".concat(s));
 		System.out.println("Reversed String: ".concat(reverseWords(s)));
 	}
 
 	private static String reverseWords(String s) {
 		
-		String[] arr = s.split(" ");
-		//Using stack
-		Deque<String> stack = new ArrayDeque<>();
+		final String[] arr = s.split(" ");
+		String sb = "";
 		
-		for(String a:arr)
-			stack.push(a);
+		for(final String a:arr) 
+			sb = a.concat(" "+sb);
 		
-		StringBuilder sb = new StringBuilder();
-		
-		while(!stack.isEmpty())
-			sb.append(stack.pop()+" ");
-	
-		return sb.toString();
+		return sb;
 	}
 	
 }
