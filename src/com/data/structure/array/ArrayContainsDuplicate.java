@@ -9,9 +9,7 @@ public class ArrayContainsDuplicate {
         int[] ar = {1,2,3,4};
         System.out.print(containsDuplicate(ar));
     }
-
     private static boolean containsDuplicate(int[] ar){
-
         Set<Integer> set = new HashSet<>();
         for (int i:ar) {
              if(set.contains(i))
