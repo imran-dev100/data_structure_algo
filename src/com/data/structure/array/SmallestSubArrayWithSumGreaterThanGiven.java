@@ -11,6 +11,17 @@ public class SmallestSubArrayWithSumGreaterThanGiven {
 		x = 9;
 		System.out.println(getSmallestSubArrayWithSumGreaterThanGiven(arr, x));
 
+		arr = new int[] { 1, 11, 100, 1, 0, 200, 3, 2, 1, 250 };
+		x = 280;
+		
+		System.out.println(getSmallestSubArrayWithSumGreaterThanGiven(arr, x));
+
+		arr = new int[] { 1, 2, 4 };
+		x = 8;
+		
+		System.out.println(getSmallestSubArrayWithSumGreaterThanGiven(arr, x));
+
+
 	}
 
 	private static int getSmallestSubArrayWithSumGreaterThanGiven(int[] arr, int x) {
@@ -32,7 +43,7 @@ public class SmallestSubArrayWithSumGreaterThanGiven {
 			}
 		}
 
-		return min;
+		return min==Integer.MAX_VALUE?-1:min;
 	}
 
 }
