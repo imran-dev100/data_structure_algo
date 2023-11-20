@@ -21,7 +21,6 @@ public class SmallestSubArrayWithSumGreaterThanGiven {
 		
 		System.out.println(getSmallestSubArrayWithSumGreaterThanGiven(arr, x));
 
-
 	}
 
 	private static int getSmallestSubArrayWithSumGreaterThanGiven(int[] arr, int x) {
