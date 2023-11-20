@@ -17,12 +17,11 @@ public class DeleteConsecutiveSameWords {
 		final String[] ar = s.split(" ");
 		final Deque<String> stack = new ArrayDeque<>();
 
-		for (final String a : ar) {
+		for (final String a : ar) 
 			if (!stack.isEmpty() && stack.peek().equals(a))
 				stack.pop();
 			else
 				stack.push(a);
-		}
 
 		return stack.size();
 	}
