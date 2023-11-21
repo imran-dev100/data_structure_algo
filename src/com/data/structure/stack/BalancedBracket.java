@@ -25,10 +25,9 @@ public class BalancedBracket {
 
 			if (c == '{' || c == '[' || c == '(')
 				stack.push(c);
+			
 			else {
-
 				switch (c) {
-
 				case '}':
 					if (stack.peek() == '[' || stack.peek() == '(')
 						return false;
@@ -40,6 +39,8 @@ public class BalancedBracket {
 				case ']':
 					if (stack.peek() == '(' || stack.peek() == '{')
 						return false;
+					break;
+				default:
 					break;
 				}
 				stack.pop();
