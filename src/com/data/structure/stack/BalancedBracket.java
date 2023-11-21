@@ -47,6 +47,6 @@ public class BalancedBracket {
 			}
 		}
 
-		return true;
+		return stack.isEmpty();
 	}
 }
