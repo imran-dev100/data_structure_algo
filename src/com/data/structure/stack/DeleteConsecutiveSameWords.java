@@ -4,7 +4,7 @@ import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class DeleteConsecutiveSameWords {
-
+	
 	public static void main(String[] args) {
 		String s = "ab aa aa bcd ab";
 		System.out.println(deleteConsecutiveWords(s));
@@ -13,7 +13,6 @@ public class DeleteConsecutiveSameWords {
 	}
 
 	private static int deleteConsecutiveWords(String s) {
-
 		final String[] ar = s.split(" ");
 		final Deque<String> stack = new ArrayDeque<>();
 
@@ -22,7 +21,6 @@ public class DeleteConsecutiveSameWords {
 				stack.pop();
 			else
 				stack.push(a);
-
 		return stack.size();
 	}
 }
