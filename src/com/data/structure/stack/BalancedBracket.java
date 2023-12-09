@@ -11,7 +11,6 @@ public class BalancedBracket {
 		System.out.println(isBalanced("{()[]}"));
 		System.out.println(isBalanced("[()]{}{[()()]()}"));
 		System.out.println(isBalanced("[(])"));
-
 	}
 
 	private static boolean isBalanced(String s) {
