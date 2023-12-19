@@ -3,8 +3,7 @@ package com.data.structure.stack;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class DeleteConsecutiveSameWords {
-	
+public class DeleteConsecutiveSameWords {	
 	public static void main(String[] args) {
 		String s = "ab aa aa bcd ab";
 		System.out.println(deleteConsecutiveWords(s));
