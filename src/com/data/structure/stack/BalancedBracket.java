@@ -45,7 +45,6 @@ public class BalancedBracket {
 				stack.pop();
 			}
 		}
-
 		return stack.isEmpty();
 	}
 }
