@@ -30,7 +30,7 @@ public class TwoSum {
                 if(nums[i]+nums[j]==target){
                     result.add(i);
                     result.add(j);
-                    break;
+                    return result;
                 }
         return result;
     }
