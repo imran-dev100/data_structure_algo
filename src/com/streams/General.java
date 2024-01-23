@@ -27,11 +27,14 @@ public class General {
 		OUT.println(printListUsingStreams(list));
 		OUT.println("Fourth largest number of the list: \n" + getFourthLargestNumber(list));
 
-		
 		list = Arrays.asList(8, 6, 7, 4, 5, 9, 3, 1, 2);
 		OUT.println(ORIGINAL_LIST);
 		OUT.println(printListUsingStreams(list));
-		OUT.println("Fourth largest number of the list: \n" + getFourthLargestNumber(list));
+		OUT.println("Sum of all numbers of the list: \n" + getSumOfAllNumbers(list));
+	}
+
+	private static int getSumOfAllNumbers(final List<Integer> list) {
+		return list.stream().reduce(0, (int1, int2) -> int1 + int2);
 	}
 
 	private static String printListUsingStreams(final List<Integer> list) {
