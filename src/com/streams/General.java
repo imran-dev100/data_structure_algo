@@ -5,10 +5,14 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 public class General {
 	private static final PrintStream OUT = System.out;
-	private static final String ORIGINAL_LIST = "Original List";
+	private static final String ORIGINAL_LIST = "Original List - ";
 
 	public static void main(String[] args) {
 
@@ -21,7 +25,7 @@ public class General {
 		OUT.println(ORIGINAL_LIST);
 		OUT.println(printListUsingStreams(list));
 		OUT.println("Distinct numbers of the list: \n" + getDistinctAndSortedInDescending(list));
-		
+
 		list = Arrays.asList(8, 6, 7, 4, 5, 9, 3, 1, 2);
 		OUT.println(ORIGINAL_LIST);
 		OUT.println(printListUsingStreams(list));
@@ -31,14 +35,26 @@ public class General {
 		OUT.println(ORIGINAL_LIST);
 		OUT.println(printListUsingStreams(list));
 		OUT.println("Sum of all numbers of the list: \n" + getSumOfAllNumbers(list));
+
+		List<String> strings = Arrays.asList("Imran", "loves", "Imran");
+		OUT.println(ORIGINAL_LIST);
+		OUT.println(printListUsingStreams(strings));
+
+		OUT.println("Word-Count Map: \n" + createWordCount(strings));
+
+	}
+
+	private static Map<String, Long> createWordCount(final List<String> strings) {
+		return strings.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
 	}
 
 	private static int getSumOfAllNumbers(final List<Integer> list) {
 		return list.stream().reduce(0, (int1, int2) -> int1 + int2);
 	}
 
-	private static String printListUsingStreams(final List<Integer> list) {
-		return list.stream().map(String::valueOf).reduce((int1, int2) -> int1 + " " + int2).orElse(Collections.emptyList().toString());
+	private static String printListUsingStreams(final List<?> list) {
+		return list.stream().map(String::valueOf).reduce((element1, element2) -> element1 + " " + element2)
+				.orElse(Collections.emptyList().toString());
 	}
 
 	private static Integer getFourthLargestNumber(final List<Integer> list) {
