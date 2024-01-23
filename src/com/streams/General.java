@@ -1,30 +1,37 @@
 package com.streams;
 
+import java.io.PrintStream;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
 public class General {
+	private static final PrintStream OUT = System.out;
 	private static final String ORIGINAL_LIST = "Original List";
 
 	public static void main(String[] args) {
 
 		List<Integer> list = Arrays.asList(8, 6, 7, 4, 5, 9, 3, 1, 2);
-		System.out.println(ORIGINAL_LIST);
-		System.out.println(printListUsingStreams(list));
-		System.out.println("Average of the numbers: " + calculateAverage(list));
+		OUT.println(ORIGINAL_LIST);
+		OUT.println(printListUsingStreams(list));
+		OUT.println("Average of the numbers: " + calculateAverage(list));
 
 		list = Arrays.asList(8, 9, 6, 7, 3, 4, 5, 8, 9, 3, 1, 6, 2, 4);
-		System.out.println(ORIGINAL_LIST);
-		System.out.println(printListUsingStreams(list));
-		System.out.println("Distinct numbers of the list: \n" + getDistinctAndSortedInDescending(list));
+		OUT.println(ORIGINAL_LIST);
+		OUT.println(printListUsingStreams(list));
+		OUT.println("Distinct numbers of the list: \n" + getDistinctAndSortedInDescending(list));
 		
 		list = Arrays.asList(8, 6, 7, 4, 5, 9, 3, 1, 2);
-		System.out.println(ORIGINAL_LIST);
-		System.out.println(printListUsingStreams(list));
-		System.out.println("Fourth largest number of the list: \n" + getFourthLargestNumber(list));
+		OUT.println(ORIGINAL_LIST);
+		OUT.println(printListUsingStreams(list));
+		OUT.println("Fourth largest number of the list: \n" + getFourthLargestNumber(list));
 
+		
+		list = Arrays.asList(8, 6, 7, 4, 5, 9, 3, 1, 2);
+		OUT.println(ORIGINAL_LIST);
+		OUT.println(printListUsingStreams(list));
+		OUT.println("Fourth largest number of the list: \n" + getFourthLargestNumber(list));
 	}
 
 	private static String printListUsingStreams(final List<Integer> list) {
