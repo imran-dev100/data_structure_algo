@@ -10,6 +10,7 @@ public class BestTimeToBuyAndSellStock {
         System.out.println(maxProfit(prices));
     }
 
+    
     public static int maxProfit(int[] prices) {
         int lsf = Integer.MAX_VALUE;
         int op = 0;
