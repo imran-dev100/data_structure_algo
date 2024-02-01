@@ -6,7 +6,7 @@ import java.util.Set;
 public class ArrayContainsDuplicate {
 
     public static void main(String[] args) {
-        int[] ar = {1,2,3,4};
+        final int[] ar = {1,2,3,4};
         System.out.print(containsDuplicate(ar));
     }
     private static boolean containsDuplicate(int[] ar){
