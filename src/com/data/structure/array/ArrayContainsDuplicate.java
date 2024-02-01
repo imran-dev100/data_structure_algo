@@ -10,7 +10,7 @@ public class ArrayContainsDuplicate {
         System.out.print(containsDuplicate(ar));
     }
     private static boolean containsDuplicate(int[] ar){
-        Set<Integer> set = new HashSet<>();
+        final Set<Integer> set = new HashSet<>();
         for (int i:ar) {
              if(set.contains(i))
                  return true;
