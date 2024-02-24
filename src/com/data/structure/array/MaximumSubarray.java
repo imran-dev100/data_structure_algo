@@ -26,7 +26,6 @@ public class MaximumSubarray {
 		
 		nums = new int[]{5,4,-1,7,8};
 		System.out.println(maxSubArray(nums));
-
 	}
 	
 	private static int maxSubArray(int[] nums) {
