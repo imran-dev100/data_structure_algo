@@ -20,7 +20,6 @@ public class SmallestSubArrayWithSumGreaterThanGiven {
 		x = 8;
 		
 		System.out.println(getSmallestSubArrayWithSumGreaterThanGiven(arr, x));
-
 	}
 
 	private static int getSmallestSubArrayWithSumGreaterThanGiven(int[] arr, int x) {
