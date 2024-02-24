@@ -29,14 +29,13 @@ public class ProductOfArrayExceptItself {
 
 		for (i = 0; i < n; i++)
 			prod[i] = temp;
-
+		
 		temp = 1;
 
 		for (i = 0; i < n; i++) {
 			prod[i] = temp;
 			temp = temp * arr[i];
 		}
-
 		temp = 1;
 
 		for (i = n - 1; i >= 0; i--) {
