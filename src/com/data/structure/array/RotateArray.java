@@ -13,7 +13,6 @@ public class RotateArray {
 		rotateArray(a, a.length, 3);
 		System.out.println("---------------");
 		rotateArrayUsingQueue(a, a.length, 3);
-
 	}
 
 	private static void rotateArrayUsingQueue(int[] a, int n, int r) {
