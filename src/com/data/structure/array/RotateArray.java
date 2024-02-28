@@ -7,7 +7,6 @@ import java.util.Deque;
 public class RotateArray {
 
 	public static void main(String[] args) {
-
 		int[] a = { 1, 2, 3, 4, 5 };
 
 		rotateArray(a, a.length, 3);
