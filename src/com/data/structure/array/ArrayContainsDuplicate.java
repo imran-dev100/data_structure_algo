@@ -9,7 +9,6 @@ public class ArrayContainsDuplicate {
         final int[] ar = {1,2,3,4};
         System.out.print(containsDuplicate(ar));
     }
-
     private static boolean containsDuplicate(int[] ar){
         final Set<Integer> set = new HashSet<>();
         for (int i:ar) {
