@@ -43,7 +43,6 @@ public class General {
 		OUT.println("Word-Count Map: \n" + createWordCount(strings));
 
 	}
-
 	
 	private static Map<String, Long> createWordCount(final List<String> strings) {
 		return strings.stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));
